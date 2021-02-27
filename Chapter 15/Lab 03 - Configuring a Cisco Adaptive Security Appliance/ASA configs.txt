@@ -1,0 +1,91 @@
+ASA-1#show running-config 
+: Saved
+:
+ASA Version 8.4(2)
+!
+hostname ASA-1
+domain-name ciscoasa.lab
+enable password XK9CbN4MkQEI0jdt encrypted
+names
+!
+interface Ethernet0/0
+!
+interface Ethernet0/1
+ switchport access vlan 3
+!
+interface Ethernet0/2
+ switchport access vlan 2
+!
+interface Ethernet0/3
+!
+interface Ethernet0/4
+!
+interface Ethernet0/5
+!
+interface Ethernet0/6
+!
+interface Ethernet0/7
+!
+interface Vlan1
+ nameif inside
+ security-level 100
+ ip address 172.16.1.1 255.255.255.0
+!
+interface Vlan2
+ nameif outside
+ security-level 0
+ ip address 10.1.1.2 255.255.255.252
+!
+interface Vlan3
+ no forward interface Vlan1
+ nameif dmz
+ security-level 50
+ ip address 172.17.1.1 255.255.255.0
+!
+object network inside-network
+ subnet 172.16.1.0 255.255.255.0
+object network webserver-dmz
+ host 172.17.1.10
+!
+route outside 0.0.0.0 0.0.0.0 10.1.1.1 1
+!
+access-list DMZ-OUT extended permit icmp any host 172.17.1.10
+access-list DMZ-OUT extended permit tcp any host 172.17.1.10 eq www
+!
+!
+access-group DMZ-OUT in interface outside
+object network inside-network
+ nat (inside,outside) dynamic interface
+object network webserver-dmz
+ nat (dmz,outside) static 10.1.1.2
+!
+aaa authentication ssh console LOCAL
+!
+!
+username Admin1 password 6V0hHksSOUtYy/Bk encrypted
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+policy-map global_policy
+ class inspection_default
+  inspect icmp 
+!
+service-policy global_policy global
+!
+telnet timeout 5
+ssh 172.16.1.0 255.255.255.0 inside
+ssh timeout 2
+!
+dhcpd auto_config outside
+!
+!
+dhcpd address 172.16.1.20-172.16.1.50 inside
+dhcpd dns 8.8.8.8 interface inside
+dhcpd enable inside
+!
+!
+!
+!
+!
+ASA-1#
