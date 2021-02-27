@@ -1,0 +1,95 @@
+HQ#show running-config 
+Building configuration...
+
+Current configuration : 1000 bytes
+!
+version 15.1
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname HQ
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524G6PO-
+license boot module c1900 technology-package securityk9
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+ip ips config location flash:ciscoipsdir retries 1
+ip ips name ciscoipsrule
+ip ips signature-category
+  category all
+   retired true
+  category ios_ips basic
+   retired false
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description Connected to ISP
+ ip address 10.1.1.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ description Connected to LAN
+ ip address 192.168.1.1 255.255.255.0
+ ip ips ciscoipsrule out
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.1.1.1 
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+logging 192.168.1.20
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
+
+HQ#

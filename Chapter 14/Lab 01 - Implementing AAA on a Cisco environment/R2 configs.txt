@@ -1,0 +1,119 @@
+R2#show running-config 
+Building configuration...
+
+Current configuration : 1457 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname R2
+!
+!
+!
+enable secret 5 $1$mERr$5.a6P4JqbNiMX01usIfka/
+!
+!
+!
+!
+!
+aaa new-model
+!
+aaa authentication login default group radius local 
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username Admin2 secret 5 $1$mERr$30voUYZTo/LCMhf7ue69/0
+!
+!
+license udi pid CISCO2911/K9 sn FTX152426X8-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name ciscolab.local
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description Connected to R1
+ ip address 10.1.1.1 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ description Connected to LAN
+ ip address 192.168.1.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ description Connected to R3
+ ip address 10.1.1.5 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ passive-interface GigabitEthernet0/1
+ network 192.168.1.0 0.0.0.255 area 0
+ network 10.1.1.0 0.0.0.3 area 0
+ network 10.1.1.4 0.0.0.3 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd ^CKeep Out!!!^C
+!
+radius-server host 192.168.1.100 auth-port 1645
+radius-server key radiuspassword
+!
+!
+!
+!
+line con 0
+ login authentication default
+!
+line aux 0
+!
+line vty 0 4
+ login authentication default
+ transport input ssh
+line vty 5 15
+ login authentication default
+ transport input ssh
+!
+!
+!
+end
+
+
+R2#
