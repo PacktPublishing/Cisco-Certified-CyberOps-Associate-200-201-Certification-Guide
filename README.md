@@ -51,6 +51,12 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](http://www.packtpub.com/sites/default/files/downloads/9781800560871_ColorImages.pdf).
 
+### Code in Action
+Click on following link to see the Code in Action:
+
+[Youtube link]( https://bit.ly/3xrwJTG)
+
+
 ### Related products
 * Implementing and Administering Cisco Solutions: 200-301 CCNA Exam Guide [[Packt]](https://www.packtpub.com/product/implementing-and-administering-cisco-solutions-200-301-ccna-exam-guide/9781800208094?utm_source=github&utm_medium=repository&utm_campaign=9781800208094) [[Amazon]](https://www.amazon.com/dp/180020809X)
 
