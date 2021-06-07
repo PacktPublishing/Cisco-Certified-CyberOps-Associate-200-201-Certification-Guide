@@ -67,5 +67,3 @@ Click on following link to see the Code in Action:
 is a cybersecurity instructor and an InfoSec author. His areas of expertise are cybersecurity operations, offensive security tactics, and enterprise networking. He is a holder of many certifications, including CEH, CHFI, PAWSP, and 3xCCNA (in CyberOps, Security, and Routing and Switching).
 Glen loves teaching and mentoring others, and sharing his wealth of knowledge and experience as an author. He has written many books that focus on vulnerability discovery and exploitation, threat detection, intrusion analysis, incident response (IR), implementing security solutions, and enterprise networking. As an aspiring game changer, Glen is passionate about increasing cybersecurity awareness in his homeland, Trinidad and Tobago.
 
-## Other books by the authors
-* [Implementing and Administering Cisco Solutions: 200-301 CCNA Exam Guide](https://www.packtpub.com/product/implementing-and-administering-cisco-solutions-200-301-ccna-exam-guide/9781800208094?utm_source=github&utm_medium=repository&utm_campaign=9781800208094)
