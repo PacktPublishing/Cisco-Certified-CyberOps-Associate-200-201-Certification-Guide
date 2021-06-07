@@ -1,4 +1,4 @@
-# Cisco Certified CyberOps Associate 200-201 Certification Bootcamp
+# Cisco Certified CyberOps Associate 200-201 Certification Guide
 
 <a href="https://www.packtpub.com/product/cisco-certified-cyberops-associate-200-201-certification-bootcamp/9781800560871?utm_source=github&utm_medium=repository&utm_campaign=9781800560871"><img src="https://static.packt-cdn.com/products/9781800560871/cover/smaller" alt="Cisco Certified CyberOps Associate 200-201 Certification Bootcamp" height="256px" align="right"></a>
 
