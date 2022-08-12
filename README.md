@@ -62,6 +62,9 @@ Click on following link to see the Code in Action:
 
 * CompTIA Security+: SY0-601 Certification Guide - Second Edition [[Packt]](https://www.packtpub.com/product/comptia-security-sy0-601-certification-guide-second-edition/9781800564244?utm_source=github&utm_medium=repository&utm_campaign=9781800564244) [[Amazon]](https://www.amazon.com/dp/1800564244)
 
+## Errata
+* Assessment(Chapter 2, Question 6):**A, C**_should be_**B, D**
+
 ## Get to Know the Author
 **Glen D. Singh**
 is a cybersecurity instructor and an InfoSec author. His areas of expertise are cybersecurity operations, offensive security tactics, and enterprise networking. He is a holder of many certifications, including CEH, CHFI, PAWSP, and 3xCCNA (in CyberOps, Security, and Routing and Switching).
