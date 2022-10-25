@@ -70,3 +70,7 @@ Click on following link to see the Code in Action:
 is a cybersecurity instructor and an InfoSec author. His areas of expertise are cybersecurity operations, offensive security tactics, and enterprise networking. He is a holder of many certifications, including CEH, CHFI, PAWSP, and 3xCCNA (in CyberOps, Security, and Routing and Switching).
 Glen loves teaching and mentoring others, and sharing his wealth of knowledge and experience as an author. He has written many books that focus on vulnerability discovery and exploitation, threat detection, intrusion analysis, incident response (IR), implementing security solutions, and enterprise networking. As an aspiring game changer, Glen is passionate about increasing cybersecurity awareness in his homeland, Trinidad and Tobago.
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781800560871">https://packt.link/free-ebook/9781800560871 </a> </p>
